@@ -2,7 +2,7 @@ using DiceApi.Models;
 
 namespace DiceApi.Services;
 
-public class DiceService
+internal class DiceService
 {
     internal static Dice GetNumber(DiceTypes diceTypes)
     {
@@ -13,43 +13,43 @@ public class DiceService
             case DiceTypes.D4:
                 dices = new Dice
                 {
-                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D4)
+                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D4 + 1)
                 };
                 return dices;
             case DiceTypes.D6:
                 dices = new Dice
                 {
-                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D6)
+                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D6 + 1)
                 };
                 return dices;
             case DiceTypes.D8:
                 dices = new Dice
                 {
-                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D8)
+                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D8 + 1)
                 };
                 return dices;
             case DiceTypes.D10:
                 dices = new Dice
                 {
-                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D10)
+                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D10 + 1)
                 };
                 return dices;
             case DiceTypes.D12:
                 dices = new Dice
                 {
-                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D12)
+                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D12 + 1)
                 };
                 return dices;
             case DiceTypes.D20:
                 dices = new Dice
                 {
-                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D20)
+                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D20 + 1)
                 };
                 return dices;
             default:
                 dices = new Dice
                 {
-                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D6)
+                    Result = randomDiceNumber.Next(1, (int)DiceTypes.D6 + 1)
                 };
                 return dices;
         }
