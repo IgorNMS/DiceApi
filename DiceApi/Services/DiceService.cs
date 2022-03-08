@@ -4,7 +4,7 @@ namespace DiceApi.Services;
 
 internal class DiceService
 {
-    internal static Dice GetNumber(DiceTypes diceTypes)
+    public static Dice GetNumber(DiceTypes diceTypes)
     {
         Dice dices;
         Random randomDiceNumber = new Random();
